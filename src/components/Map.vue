@@ -1,10 +1,17 @@
 <template>
   <div class="map-background">
-    <h1>JHGJHGJGJ</h1>
     <img src="../assets/map.svg" />
     <div class="tomsk"></div>
     <div class="burgas"></div>
     <div class="varna"></div>
+    <div class="belgorod"></div>
+    <div class="keninsberg"></div>
+    <div class="kaunas"></div>
+    <div class="vitebsk"></div>
+    <div class="riga"></div>
+    <div class="orsha"></div>
+    <div class="smolensk"></div>
+    <div class="elnya"></div>
   </div>
 </template>
 
@@ -38,7 +45,79 @@ img {
   width: 10px;
   height: 10px;
   position: relative;
-  left: 10%;
-  top: 80%;
+  left: 24.6%;
+  bottom: 6%;
+}
+.varna {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 25.8%;
+  bottom: 12.1%;
+}
+.belgorod {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 41.7%;
+  bottom: 38.7%;
+}
+.keninsberg {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 23.2%;
+  bottom: 52%;
+}
+.kaunas {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 26.1%;
+  bottom: 53.6%;
+}
+.vitebsk {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 33.5%;
+  bottom: 54.6%;
+}
+.riga {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 29.9%;
+  bottom: 61.8%;
+}
+.orsha {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 33.2%;
+  bottom: 53.6%;
+}
+.smolensk {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 35.5%;
+  bottom: 53.3%;
+}
+.elnya {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 37.9%;
+  bottom: 53%;
 }
 </style>
