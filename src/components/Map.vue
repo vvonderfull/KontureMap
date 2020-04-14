@@ -37,6 +37,7 @@
     <div class="tihvin"></div>
     <div class="myasnoy-bor"></div>
     <div class="vel-luki"></div>
+    <div class="riga-left"></div>
   </div>
 </template>
 
@@ -376,5 +377,13 @@ img {
   position: relative;
   bottom: 85.6%;
   left: 35.4%;
+}
+.riga-left {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 28.4%;
+  bottom: 89%;
 }
 </style>
