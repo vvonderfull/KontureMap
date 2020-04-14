@@ -260,6 +260,45 @@
           fill="none"
           stroke-width="5"
         />
+        <line
+          :x1="vel_luki1.x"
+          :y1="vel_luki1.y"
+          :x2="elnya1.x"
+          :y2="elnya1.y"
+          stroke="limegreen"
+          stroke-width="5"
+        />
+        <line
+          :x1="smolensk1.x"
+          :y1="smolensk1.y"
+          :x2="elnya1.x"
+          :y2="elnya1.y"
+          stroke="limegreen"
+          stroke-width="5"
+        />
+        <line
+          :x1="smolensk1.x"
+          :y1="smolensk1.y"
+          :x2="orsha1.x"
+          :y2="orsha1.y"
+          stroke="limegreen"
+          stroke-width="5"
+        />
+        <line
+          :x1="riga1.x"
+          :y1="riga1.y"
+          :x2="orsha1.x"
+          :y2="orsha1.y"
+          stroke="limegreen"
+          stroke-width="5"
+        />
+        <path
+          :d="'M'+ rigaLeft1.x + ',' + rigaLeft1.y + ' ' + 'C' + (rigaLeft1.x - 5) + ',' + (rigaLeft1.y + 25) + ' ' 
+                 + (riga1.x - 10) + ',' + (riga1.y + 30) + ' ' + riga1.x + ',' + riga1.y"
+          stroke="limegreen"
+          fill="none"
+          stroke-width="5"
+        />
       </a>
     </svg>
   </div>
@@ -305,7 +344,8 @@ export default {
       stRussa1: {},
       poznan1: {},
       magdeburg1: {},
-      myasnoyBor1: {}
+      myasnoyBor1: {},
+      smolensk1: {}
     };
   },
   mounted() {
