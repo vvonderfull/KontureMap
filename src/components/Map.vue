@@ -38,14 +38,230 @@
     <div class="myasnoy-bor"></div>
     <div class="vel-luki"></div>
     <div class="riga-left"></div>
+    <svg width="2000px" height="2000px" class="svg">
+      <!-- <path class="path123" 
+            :d = "asino1.x, asino1.y tomsk1.x, tomsk1.y"
+      stroke="blue" fill="none"/>-->
+      <line
+        :x1="asino1.x - 1.5"
+        :y1="asino1.y - 1.5"
+        :x2="tomsk1.x - 1.5"
+        :y2="tomsk1.y - 1.5"
+        stroke="blue"
+        stroke-width="5"
+      />
+      <a href="#">
+        ////////////// RED PATH
+        <path
+          :d="'M'+ novosibirsk1.x + ',' + novosibirsk1.y + ' ' + 'C' + (novosibirsk1.x - 200) + ',' + (novosibirsk1.y - 100) + ' ' + (moskva1.x + 120) + ',' + (moskva1.y - 40) + ' ' + moskva1.x + ',' + moskva1.y"
+          stroke="red"
+          fill="none"
+          stroke-width="5"
+        />
+        <line
+          :x1="tomsk1.x"
+          :y1="tomsk1.y"
+          :x2="novosibirsk1.x"
+          :y2="novosibirsk1.y"
+          stroke="red"
+          stroke-width="5"
+        />
+        <line
+          :x1="tomsk1.x"
+          :y1="tomsk1.y"
+          :x2="yurga1.x"
+          :y2="yurga1.y"
+          stroke="red"
+          stroke-width="5"
+        />
+        <line
+          :x1="moskva1.x"
+          :y1="moskva1.y"
+          :x2="vyazma1.x"
+          :y2="vyazma1.y"
+          stroke="red"
+          stroke-width="5"
+        />
+        <line
+          :x1="white1.x"
+          :y1="white1.y"
+          :x2="vyazma1.x"
+          :y2="vyazma1.y"
+          stroke="red"
+          stroke-width="5"
+        />
+        <line
+          :x1="white1.x"
+          :y1="white1.y"
+          :x2="duhovshina1.x"
+          :y2="duhovshina1.y"
+          stroke="red"
+          stroke-width="5"
+        />
+        <line
+          :x1="vyazma1.x"
+          :y1="vyazma1.y"
+          :x2="duhovshina1.x"
+          :y2="duhovshina1.y"
+          stroke="red"
+          stroke-width="5"
+        />
+      </a>
+      /////// LIGHT BLUE PATH
+      <a href="#">
+        <line
+          :x1="asino1.x + 1.5"
+          :y1="asino1.y + 1.5"
+          :x2="tomsk1.x + 1.5"
+          :y2="tomsk1.y + 1.5"
+          stroke="deepskyblue"
+          stroke-width="5"
+        />
+        <line
+          :x1="novosibirsk1.x + 3"
+          :y1="novosibirsk1.y + 3"
+          :x2="tomsk1.x + 3"
+          :y2="tomsk1.y + 3"
+          stroke="deepskyblue"
+          stroke-width="5"
+        />
+        <line
+          :x1="novosibirsk1.x"
+          :y1="novosibirsk1.y"
+          :x2="stalingrad1.x"
+          :y2="stalingrad1.y"
+          stroke="deepskyblue"
+          stroke-width="5"
+        />
+        <line
+          :x1="belgorod1.x"
+          :y1="belgorod1.y"
+          :x2="stalingrad1.x"
+          :y2="stalingrad1.y"
+          stroke="deepskyblue"
+          stroke-width="5"
+        />
+        <line
+          :x1="belgorod1.x"
+          :y1="belgorod1.y"
+          :x2="kr_rog1.x"
+          :y2="kr_rog1.y"
+          stroke="deepskyblue"
+          stroke-width="5"
+        />
+        <path
+          :d="'M'+ varna1.x + ',' + varna1.y + ' ' + 'C' + (varna1.x - 0) + ',' + (varna1.y - 30) + ' ' + (kr_rog1.x - 110) + ',' + (kr_rog1.y - 80) + ' ' + kr_rog1.x + ',' + kr_rog1.y"
+          stroke="deepskyblue"
+          fill="none"
+          stroke-width="5"
+        />
+        <line
+          :x1="varna1.x"
+          :y1="varna1.y"
+          :x2="burgas1.x"
+          :y2="burgas1.y"
+          stroke="deepskyblue"
+          stroke-width="5"
+        />
+      </a>
+    </svg>
   </div>
 </template>
 
 <script>
 export default {
   name: "Map.vue",
+  data() {
+    return {
+      tomsk1: {},
+      asino1: {},
+      moskva1: {},
+      novosibirsk1: {},
+      yurga1: {},
+      vyazma1: {},
+      white1: {},
+      duhovshina1: {},
+      stalingrad1: {},
+      belgorod1: {},
+      kr_rog1: {},
+      varna1: {},
+      burgas1: {}
+    };
+  },
   mounted() {
-    console.log(window);
+    for (let i = 0; i < document.all.length; i++) {
+      if (
+        document.all[i].className != "map-background" &&
+        document.all[i].className != ""
+      ) {
+        if (document.all[i].className == "tomsk") {
+          this.tomsk1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "asino") {
+          this.asino1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "moskva") {
+          this.moskva1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "novosibirsk") {
+          this.novosibirsk1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "yurga") {
+          this.yurga1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "vyazma") {
+          this.vyazma1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "white") {
+          this.white1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "duhovshina") {
+          this.duhovshina1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "stalingrad") {
+          this.stalingrad1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "belgorod") {
+          this.belgorod1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "kr-rog") {
+          this.kr_rog1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "varna") {
+          this.varna1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "burgas") {
+          this.burgas1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        }
+      }
+    }
   }
 };
 </script>
@@ -385,5 +601,9 @@ img {
   position: relative;
   left: 28.4%;
   bottom: 89%;
+}
+.svg {
+  position: absolute;
+  top: 0;
 }
 </style>
