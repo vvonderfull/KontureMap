@@ -164,6 +164,103 @@
           stroke-width="5"
         />
       </a>
+      /////// VIOLET PATH
+      <a href="#">
+        <line
+          :x1="tomsk1.x - 3.5"
+          :y1="tomsk1.y - 3.5"
+          :x2="novosibirsk1.x - 3.5"
+          :y2="novosibirsk1.y - 3.5"
+          stroke="indigo"
+          stroke-width="5"
+        />
+        <path
+          :d="'M'+ vologda1.x + ',' + vologda1.y + ' ' + 'C' + (vologda1.x + 35) + ',' + (vologda1.y - 10) + ' ' 
+                 + (novosibirsk1.x - 110) + ',' + (novosibirsk1.y - 110) + ' ' + novosibirsk1.x + ',' + novosibirsk1.y"
+          stroke="indigo"
+          fill="none"
+          stroke-width="5"
+        />
+        <path
+          :d="'M'+ tihvin1.x + ',' + tihvin1.y + ' ' + 'C' + (tihvin1.x + 15) + ',' + (tihvin1.y - 10) + ' ' 
+                 + (vologda1.x - 100) + ',' + (vologda1.y - 60) + ' ' + vologda1.x + ',' + vologda1.y"
+          stroke="indigo"
+          fill="none"
+          stroke-width="5"
+        />
+        <line
+          :x1="sinyavino1.x"
+          :y1="sinyavino1.y"
+          :x2="tihvin1.x"
+          :y2="tihvin1.y"
+          stroke="indigo"
+          stroke-width="5"
+        />
+        <line
+          :x1="sinyavino1.x"
+          :y1="sinyavino1.y"
+          :x2="vel_luki1.x"
+          :y2="vel_luki1.y"
+          stroke="indigo"
+          stroke-width="5"
+        />
+        <path
+          :d="'M'+ duhovshina1.x + ',' + duhovshina1.y + ' ' + 'C' + (duhovshina1.x + 0) + ',' + (duhovshina1.y - 0) + ' ' 
+                 + (vel_luki1.x - 0) + ',' + (vel_luki1.y + 60) + ' ' + vel_luki1.x + ',' + vel_luki1.y"
+          stroke="indigo"
+          fill="none"
+          stroke-width="5"
+        />
+        <line
+          :x1="vitebsk1.x"
+          :y1="vitebsk1.y"
+          :x2="duhovshina1.x"
+          :y2="duhovshina1.y"
+          stroke="indigo"
+          stroke-width="5"
+        />
+        <line
+          :x1="vitebsk1.x"
+          :y1="vitebsk1.y"
+          :x2="kaunas1.x"
+          :y2="kaunas1.y"
+          stroke="indigo"
+          stroke-width="5"
+        />
+        <line
+          :x1="keninsberg1.x"
+          :y1="keninsberg1.y"
+          :x2="kaunas1.x"
+          :y2="kaunas1.y"
+          stroke="indigo"
+          stroke-width="5"
+        />
+      </a>
+      //////// GREEN PATH
+      <a href="#">
+        <line
+          :x1="tomsk1.x + 6.5"
+          :y1="tomsk1.y + 6.5"
+          :x2="novosibirsk1.x + 6.5"
+          :y2="novosibirsk1.y + 6.5"
+          stroke="limegreen"
+          stroke-width="5"
+        />
+        <path
+          :d="'M'+ moskva1.x + ',' + moskva1.y + ' ' + 'C' + (moskva1.x + 110) + ',' + (moskva1.y - 30) + ' ' 
+                 + (novosibirsk1.x - 120) + ',' + (novosibirsk1.y - 50) + ' ' + novosibirsk1.x + ',' + novosibirsk1.y"
+          stroke="limegreen"
+          fill="none"
+          stroke-width="5"
+        />
+        <path
+          :d="'M'+ vel_luki1.x + ',' + vel_luki1.y + ' ' + 'C' + (vel_luki1.x - 0) + ',' + (vel_luki1.y + 25) + ' ' 
+                 + (moskva1.x - 30) + ',' + (moskva1.y + 30) + ' ' + moskva1.x + ',' + moskva1.y"
+          stroke="limegreen"
+          fill="none"
+          stroke-width="5"
+        />
+      </a>
     </svg>
   </div>
 </template>
@@ -185,7 +282,30 @@ export default {
       belgorod1: {},
       kr_rog1: {},
       varna1: {},
-      burgas1: {}
+      burgas1: {},
+      vologda1: {},
+      tihvin1: {},
+      sinyavino1: {},
+      vel_luki1: {},
+      vitebsk1: {},
+      kaunas1: {},
+      keninsberg1: {},
+      riga1: {},
+      orsha1: {},
+      elnya1: {},
+      korovel1: {},
+      kastornoe1: {},
+      odessa1: {},
+      odessaKorovel1: {},
+      rigaLeft1: {},
+      zaporoje1: {},
+      lubvin1: {},
+      lodz1: {},
+      berlin1: {},
+      stRussa1: {},
+      poznan1: {},
+      magdeburg1: {},
+      myasnoyBor1: {}
     };
   },
   mounted() {
@@ -259,6 +379,114 @@ export default {
             x: document.all[i].offsetLeft + 5,
             y: document.all[i].offsetTop + 5
           };
+        } else if (document.all[i].className == "vologda") {
+          this.vologda1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "tihvin") {
+          this.tihvin1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "sinyavino") {
+          this.sinyavino1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "vel-luki") {
+          this.vel_luki1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "vitebsk") {
+          this.vitebsk1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "kaunas") {
+          this.kaunas1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "keninsberg") {
+          this.keninsberg1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "riga") {
+          this.riga1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "orsha") {
+          this.orsha1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "smolensk") {
+          this.smolensk1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "elnya") {
+          this.elnya1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "kastornoe") {
+          this.kastornoe1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "zaporoje") {
+          this.zaporoje1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "odessa") {
+          this.odessa1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "odessa-korovel") {
+          this.odessaKorovel1 = {
+            x: document.all[i].offsetLeft + 5,
+            y: document.all[i].offsetTop + 5
+          };
+        } else if (document.all[i].className == "korovel") {
+          this.korovel1.x = document.all[i].offsetLeft + 5;
+          this.korovel1.y = document.all[i].offsetTop + 5;
+        } else if (document.all[i].className == "lubvin") {
+          this.lubvin1.x = document.all[i].offsetLeft + 5;
+          this.lubvin1.y = document.all[i].offsetTop + 5;
+        } else if (document.all[i].className == "lodz") {
+          this.lodz1.x = document.all[i].offsetLeft + 5;
+          this.lodz1.y = document.all[i].offsetTop + 5;
+        } else if (document.all[i].className == "berlin") {
+          this.berlin1.x = document.all[i].offsetLeft + 5;
+          this.berlin1.y = document.all[i].offsetTop + 5;
+        } else if (document.all[i].className == "st-russa") {
+          this.stRussa1.x = document.all[i].offsetLeft + 5;
+          this.stRussa1.y = document.all[i].offsetTop + 5;
+        } else if (document.all[i].className == "kr-rog") {
+          this.krRog1.x = document.all[i].offsetLeft + 5;
+          this.krRog1.y = document.all[i].offsetTop + 5;
+        } else if (document.all[i].className == "poznan") {
+          this.poznan1.x = document.all[i].offsetLeft + 5;
+          this.poznan1.y = document.all[i].offsetTop + 5;
+        } else if (document.all[i].className == "magdeburg") {
+          this.magdeburg1.x = document.all[i].offsetLeft + 5;
+          this.magdeburg1.y = document.all[i].offsetTop + 5;
+        } else if (document.all[i].className == "sinyavino") {
+          this.sinyavino1.x = document.all[i].offsetLeft + 5;
+          this.sinyavino1.y = document.all[i].offsetTop + 5;
+        } else if (document.all[i].className == "myasnoy-bor") {
+          this.myasnoyBor1.x = document.all[i].offsetLeft + 5;
+          this.myasnoyBor1.y = document.all[i].offsetTop + 5;
+        } else if (document.all[i].className == "riga-left") {
+          this.rigaLeft1.x = document.all[i].offsetLeft + 5;
+          this.rigaLeft1.y = document.all[i].offsetTop + 5;
         }
       }
     }
