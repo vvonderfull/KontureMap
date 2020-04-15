@@ -38,10 +38,11 @@
     <div class="myasnoy-bor"></div>
     <div class="vel-luki"></div>
     <div class="riga-left"></div>
-    <svg width="2000px" height="2000px" class="svg">
+    <svg width="1800px" height="1200px" class="svg">
       //////////// BLUE PATH
-      <a href="#">
+      <a href="#" class="blue-a">
         <line
+          class="blue"
           :x1="asino1.x - 1.5"
           :y1="asino1.y - 1.5"
           :x2="tomsk1.x - 1.5"
@@ -50,6 +51,7 @@
           stroke-width="5"
         />
         <line
+          class="blue"
           :x1="novosibirsk1.x - 7"
           :y1="novosibirsk1.y - 7"
           :x2="tomsk1.x - 7"
@@ -59,10 +61,62 @@
         />
         <path
           class="blue"
-          :d="'M'+ novosibirsk1.x + ',' + novosibirsk1.y + ' ' + 'C' + (novosibirsk1.x - 120) + ',' + (novosibirsk1.y - 120) + ' ' 
-                 + (vel_luki1.x + 120) + ',' + (vel_luki1.y - 90) + ' ' + vel_luki1.x + ',' + vel_luki1.y"
+          :d="'M'+ novosibirsk1.x + ',' + novosibirsk1.y + ' ' + 'C' + (novosibirsk1.x - 150) + ',' + (novosibirsk1.y - 150) + ' ' 
+                 + (stRussa1.x + 120) + ',' + (stRussa1.y - 90) + ' ' + stRussa1.x + ',' + stRussa1.y"
           stroke="blue"
           fill="none"
+          stroke-width="5"
+        />
+        <line
+          class="blue"
+          :x1="stRussa1.x"
+          :y1="stRussa1.y"
+          :x2="vyazma1.x"
+          :y2="vyazma1.y"
+          stroke="blue"
+          stroke-width="5"
+        />
+        <path
+          class="blue"
+          :d="'M'+ vyazma1.x + ',' + vyazma1.y + ' ' + 'C' + (vyazma1.x + 0) + ',' + (vyazma1.y + 50) + ' ' 
+                 + (korovel1.x + 120) + ',' + (korovel1.y + 30) + ' ' + korovel1.x + ',' + korovel1.y"
+          stroke="blue"
+          fill="none"
+          stroke-width="5"
+        />
+        <line
+          class="blue"
+          :x1="korovel1.x"
+          :y1="korovel1.y"
+          :x2="lubvin1.x"
+          :y2="lubvin1.y"
+          stroke="blue"
+          stroke-width="5"
+        />
+        <path
+          class="blue"
+          :d="'M'+ poznan1.x + ',' + poznan1.y + ' ' + 'C' + (poznan1.x + 0) + ',' + (poznan1.y + 50) + ' ' 
+                 + (lubvin1.x - 20) + ',' + (lubvin1.y - 15) + ' ' + lubvin1.x + ',' + lubvin1.y"
+          stroke="blue"
+          fill="none"
+          stroke-width="5"
+        />
+        <line
+          class="blue"
+          :x1="poznan1.x"
+          :y1="poznan1.y"
+          :x2="berlin1.x"
+          :y2="berlin1.y"
+          stroke="blue"
+          stroke-width="5"
+        />
+        <line
+          class="blue"
+          :x1="berlin1.x"
+          :y1="berlin1.y"
+          :x2="magdeburg1.x"
+          :y2="magdeburg1.y"
+          stroke="blue"
           stroke-width="5"
         />
       </a>
@@ -70,7 +124,8 @@
         ////////////// RED PATH
         <path
           class="red"
-          :d="'M'+ novosibirsk1.x + ',' + novosibirsk1.y + ' ' + 'C' + (novosibirsk1.x - 200) + ',' + (novosibirsk1.y - 100) + ' ' + (moskva1.x + 120) + ',' + (moskva1.y - 40) + ' ' + moskva1.x + ',' + moskva1.y"
+          :d="'M'+ novosibirsk1.x + ',' + novosibirsk1.y + ' ' + 'C' + (novosibirsk1.x - 200) + ',' + (novosibirsk1.y - 100) + ' ' 
+                 + (moskva1.x + 120) + ',' + (moskva1.y - 40) + ' ' + moskva1.x + ',' + moskva1.y"
           stroke="red"
           fill="none"
           stroke-width="5"
@@ -179,7 +234,8 @@
         />
         <path
           class="light-blue"
-          :d="'M'+ varna1.x + ',' + varna1.y + ' ' + 'C' + (varna1.x - 0) + ',' + (varna1.y - 30) + ' ' + (kr_rog1.x - 110) + ',' + (kr_rog1.y - 80) + ' ' + kr_rog1.x + ',' + kr_rog1.y"
+          :d="'M'+ varna1.x + ',' + varna1.y + ' ' + 'C' + (varna1.x - 0) + ',' + (varna1.y - 30) + ' ' 
+                 + (kr_rog1.x - 110) + ',' + (kr_rog1.y - 80) + ' ' + kr_rog1.x + ',' + kr_rog1.y"
           stroke="deepskyblue"
           fill="none"
           stroke-width="5"
@@ -216,17 +272,26 @@
         <path
           class="violet"
           :d="'M'+ tihvin1.x + ',' + tihvin1.y + ' ' + 'C' + (tihvin1.x + 15) + ',' + (tihvin1.y - 10) + ' ' 
-                 + (vologda1.x - 100) + ',' + (vologda1.y - 60) + ' ' + vologda1.x + ',' + vologda1.y"
+                 + (vologda1.x - 60) + ',' + (vologda1.y - 30) + ' ' + vologda1.x + ',' + vologda1.y"
           stroke="indigo"
           fill="none"
           stroke-width="5"
         />
         <line
           class="violet"
-          :x1="sinyavino1.x"
-          :y1="sinyavino1.y"
+          :x1="myasnoyBor1.x"
+          :y1="myasnoyBor1.y"
           :x2="tihvin1.x"
           :y2="tihvin1.y"
+          stroke="indigo"
+          stroke-width="5"
+        />
+        <line
+          class="violet"
+          :x1="sinyavino1.x"
+          :y1="sinyavino1.y"
+          :x2="myasnoyBor1.x"
+          :y2="myasnoyBor1.y"
           stroke="indigo"
           stroke-width="5"
         />
@@ -599,6 +664,9 @@ img {
 .violet-a:hover .violet {
   stroke-width: 9;
 }
+.blue-a:hover .blue {
+  stroke-width: 9;
+}
 
 .map-background {
   width: 100%;
@@ -606,7 +674,6 @@ img {
 }
 
 .tomsk {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -615,7 +682,6 @@ img {
 }
 
 .burgas {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -624,7 +690,6 @@ img {
 }
 
 .varna {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -633,7 +698,6 @@ img {
 }
 
 .belgorod {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -642,7 +706,6 @@ img {
 }
 
 .keninsberg {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -651,7 +714,6 @@ img {
 }
 
 .kaunas {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -660,7 +722,6 @@ img {
 }
 
 .vitebsk {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -669,7 +730,6 @@ img {
 }
 
 .riga {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -678,7 +738,6 @@ img {
 }
 
 .orsha {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -687,7 +746,6 @@ img {
 }
 
 .smolensk {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -696,7 +754,6 @@ img {
 }
 
 .elnya {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -705,7 +762,6 @@ img {
 }
 
 .asino {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -714,7 +770,6 @@ img {
 }
 
 .novosibirsk {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -723,7 +778,6 @@ img {
 }
 
 .yurga {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -732,7 +786,6 @@ img {
 }
 
 .vologda {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -741,7 +794,6 @@ img {
 }
 
 .moskva {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -750,7 +802,6 @@ img {
 }
 
 .vyazma {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -759,7 +810,6 @@ img {
 }
 
 .white {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -768,7 +818,6 @@ img {
 }
 
 .duhovshina {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -777,7 +826,6 @@ img {
 }
 
 .kastornoe {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -786,7 +834,6 @@ img {
 }
 
 .stalingrad {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -795,7 +842,6 @@ img {
 }
 
 .zaporoje {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -804,7 +850,6 @@ img {
 }
 
 .odessa {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -813,7 +858,6 @@ img {
 }
 
 .odessa-korovel {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -822,7 +866,6 @@ img {
 }
 
 .korovel {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -831,7 +874,6 @@ img {
 }
 
 .lubvin {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -840,7 +882,6 @@ img {
 }
 
 .lodz {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -849,7 +890,6 @@ img {
 }
 
 .berlin {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -858,7 +898,6 @@ img {
 }
 
 .st-russa {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -867,7 +906,6 @@ img {
 }
 
 .kr-rog {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -875,7 +913,6 @@ img {
   left: 37.9%;
 }
 .poznan {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -883,7 +920,6 @@ img {
   left: 19.8%;
 }
 .magdeburg {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -891,7 +927,6 @@ img {
   left: 13.8%;
 }
 .sinyavino {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -899,7 +934,6 @@ img {
   left: 37.8%;
 }
 .tihvin {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -907,7 +941,6 @@ img {
   left: 39.8%;
 }
 .myasnoy-bor {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -915,7 +948,6 @@ img {
   left: 38.3%;
 }
 .vel-luki {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
@@ -923,7 +955,6 @@ img {
   left: 35.4%;
 }
 .riga-left {
-  background-color: blue;
   width: 10px;
   height: 10px;
   position: relative;
