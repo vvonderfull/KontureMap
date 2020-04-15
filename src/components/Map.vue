@@ -39,26 +39,44 @@
     <div class="vel-luki"></div>
     <div class="riga-left"></div>
     <svg width="2000px" height="2000px" class="svg">
-      <!-- <path class="path123" 
-            :d = "asino1.x, asino1.y tomsk1.x, tomsk1.y"
-      stroke="blue" fill="none"/>-->
-      <line
-        :x1="asino1.x - 1.5"
-        :y1="asino1.y - 1.5"
-        :x2="tomsk1.x - 1.5"
-        :y2="tomsk1.y - 1.5"
-        stroke="blue"
-        stroke-width="5"
-      />
+      //////////// BLUE PATH
       <a href="#">
+        <line
+          :x1="asino1.x - 1.5"
+          :y1="asino1.y - 1.5"
+          :x2="tomsk1.x - 1.5"
+          :y2="tomsk1.y - 1.5"
+          stroke="blue"
+          stroke-width="5"
+        />
+        <line
+          :x1="novosibirsk1.x - 7"
+          :y1="novosibirsk1.y - 7"
+          :x2="tomsk1.x - 7"
+          :y2="tomsk1.y - 7"
+          stroke="blue"
+          stroke-width="5"
+        />
+        <path
+          class="blue"
+          :d="'M'+ novosibirsk1.x + ',' + novosibirsk1.y + ' ' + 'C' + (novosibirsk1.x - 120) + ',' + (novosibirsk1.y - 120) + ' ' 
+                 + (vel_luki1.x + 120) + ',' + (vel_luki1.y - 90) + ' ' + vel_luki1.x + ',' + vel_luki1.y"
+          stroke="blue"
+          fill="none"
+          stroke-width="5"
+        />
+      </a>
+      <a href="#" class="red-a">
         ////////////// RED PATH
         <path
+          class="red"
           :d="'M'+ novosibirsk1.x + ',' + novosibirsk1.y + ' ' + 'C' + (novosibirsk1.x - 200) + ',' + (novosibirsk1.y - 100) + ' ' + (moskva1.x + 120) + ',' + (moskva1.y - 40) + ' ' + moskva1.x + ',' + moskva1.y"
           stroke="red"
           fill="none"
           stroke-width="5"
         />
         <line
+          class="red"
           :x1="tomsk1.x"
           :y1="tomsk1.y"
           :x2="novosibirsk1.x"
@@ -67,6 +85,7 @@
           stroke-width="5"
         />
         <line
+          class="red"
           :x1="tomsk1.x"
           :y1="tomsk1.y"
           :x2="yurga1.x"
@@ -75,6 +94,7 @@
           stroke-width="5"
         />
         <line
+          class="red"
           :x1="moskva1.x"
           :y1="moskva1.y"
           :x2="vyazma1.x"
@@ -83,6 +103,7 @@
           stroke-width="5"
         />
         <line
+          class="red"
           :x1="white1.x"
           :y1="white1.y"
           :x2="vyazma1.x"
@@ -91,6 +112,7 @@
           stroke-width="5"
         />
         <line
+          class="red"
           :x1="white1.x"
           :y1="white1.y"
           :x2="duhovshina1.x"
@@ -99,6 +121,7 @@
           stroke-width="5"
         />
         <line
+          class="red"
           :x1="vyazma1.x"
           :y1="vyazma1.y"
           :x2="duhovshina1.x"
@@ -108,8 +131,9 @@
         />
       </a>
       /////// LIGHT BLUE PATH
-      <a href="#">
+      <a href="#" class="light-blue-a">
         <line
+          class="light-blue"
           :x1="asino1.x + 1.5"
           :y1="asino1.y + 1.5"
           :x2="tomsk1.x + 1.5"
@@ -118,6 +142,7 @@
           stroke-width="5"
         />
         <line
+          class="light-blue"
           :x1="novosibirsk1.x + 3"
           :y1="novosibirsk1.y + 3"
           :x2="tomsk1.x + 3"
@@ -126,6 +151,7 @@
           stroke-width="5"
         />
         <line
+          class="light-blue"
           :x1="novosibirsk1.x"
           :y1="novosibirsk1.y"
           :x2="stalingrad1.x"
@@ -134,6 +160,7 @@
           stroke-width="5"
         />
         <line
+          class="light-blue"
           :x1="belgorod1.x"
           :y1="belgorod1.y"
           :x2="stalingrad1.x"
@@ -142,6 +169,7 @@
           stroke-width="5"
         />
         <line
+          class="light-blue"
           :x1="belgorod1.x"
           :y1="belgorod1.y"
           :x2="kr_rog1.x"
@@ -150,12 +178,14 @@
           stroke-width="5"
         />
         <path
+          class="light-blue"
           :d="'M'+ varna1.x + ',' + varna1.y + ' ' + 'C' + (varna1.x - 0) + ',' + (varna1.y - 30) + ' ' + (kr_rog1.x - 110) + ',' + (kr_rog1.y - 80) + ' ' + kr_rog1.x + ',' + kr_rog1.y"
           stroke="deepskyblue"
           fill="none"
           stroke-width="5"
         />
         <line
+          class="light-blue"
           :x1="varna1.x"
           :y1="varna1.y"
           :x2="burgas1.x"
@@ -165,8 +195,9 @@
         />
       </a>
       /////// VIOLET PATH
-      <a href="#">
+      <a href="#" class="violet-a">
         <line
+          class="violet"
           :x1="tomsk1.x - 3.5"
           :y1="tomsk1.y - 3.5"
           :x2="novosibirsk1.x - 3.5"
@@ -175,6 +206,7 @@
           stroke-width="5"
         />
         <path
+          class="violet"
           :d="'M'+ vologda1.x + ',' + vologda1.y + ' ' + 'C' + (vologda1.x + 35) + ',' + (vologda1.y - 10) + ' ' 
                  + (novosibirsk1.x - 110) + ',' + (novosibirsk1.y - 110) + ' ' + novosibirsk1.x + ',' + novosibirsk1.y"
           stroke="indigo"
@@ -182,6 +214,7 @@
           stroke-width="5"
         />
         <path
+          class="violet"
           :d="'M'+ tihvin1.x + ',' + tihvin1.y + ' ' + 'C' + (tihvin1.x + 15) + ',' + (tihvin1.y - 10) + ' ' 
                  + (vologda1.x - 100) + ',' + (vologda1.y - 60) + ' ' + vologda1.x + ',' + vologda1.y"
           stroke="indigo"
@@ -189,6 +222,7 @@
           stroke-width="5"
         />
         <line
+          class="violet"
           :x1="sinyavino1.x"
           :y1="sinyavino1.y"
           :x2="tihvin1.x"
@@ -197,6 +231,7 @@
           stroke-width="5"
         />
         <line
+          class="violet"
           :x1="sinyavino1.x"
           :y1="sinyavino1.y"
           :x2="vel_luki1.x"
@@ -205,6 +240,7 @@
           stroke-width="5"
         />
         <path
+          class="violet"
           :d="'M'+ duhovshina1.x + ',' + duhovshina1.y + ' ' + 'C' + (duhovshina1.x + 0) + ',' + (duhovshina1.y - 0) + ' ' 
                  + (vel_luki1.x - 0) + ',' + (vel_luki1.y + 60) + ' ' + vel_luki1.x + ',' + vel_luki1.y"
           stroke="indigo"
@@ -212,6 +248,7 @@
           stroke-width="5"
         />
         <line
+          class="violet"
           :x1="vitebsk1.x"
           :y1="vitebsk1.y"
           :x2="duhovshina1.x"
@@ -220,6 +257,7 @@
           stroke-width="5"
         />
         <line
+          class="violet"
           :x1="vitebsk1.x"
           :y1="vitebsk1.y"
           :x2="kaunas1.x"
@@ -228,6 +266,7 @@
           stroke-width="5"
         />
         <line
+          class="violet"
           :x1="keninsberg1.x"
           :y1="keninsberg1.y"
           :x2="kaunas1.x"
@@ -237,8 +276,9 @@
         />
       </a>
       //////// GREEN PATH
-      <a href="#">
+      <a href="#" class="green-a">
         <line
+          class="green"
           :x1="tomsk1.x + 6.5"
           :y1="tomsk1.y + 6.5"
           :x2="novosibirsk1.x + 6.5"
@@ -247,6 +287,7 @@
           stroke-width="5"
         />
         <path
+          class="green"
           :d="'M'+ moskva1.x + ',' + moskva1.y + ' ' + 'C' + (moskva1.x + 110) + ',' + (moskva1.y - 30) + ' ' 
                  + (novosibirsk1.x - 120) + ',' + (novosibirsk1.y - 50) + ' ' + novosibirsk1.x + ',' + novosibirsk1.y"
           stroke="limegreen"
@@ -254,6 +295,7 @@
           stroke-width="5"
         />
         <path
+          class="green"
           :d="'M'+ vel_luki1.x + ',' + vel_luki1.y + ' ' + 'C' + (vel_luki1.x - 0) + ',' + (vel_luki1.y + 25) + ' ' 
                  + (moskva1.x - 30) + ',' + (moskva1.y + 30) + ' ' + moskva1.x + ',' + moskva1.y"
           stroke="limegreen"
@@ -261,6 +303,7 @@
           stroke-width="5"
         />
         <line
+          class="green"
           :x1="vel_luki1.x"
           :y1="vel_luki1.y"
           :x2="elnya1.x"
@@ -269,6 +312,7 @@
           stroke-width="5"
         />
         <line
+          class="green"
           :x1="smolensk1.x"
           :y1="smolensk1.y"
           :x2="elnya1.x"
@@ -277,6 +321,7 @@
           stroke-width="5"
         />
         <line
+          class="green"
           :x1="smolensk1.x"
           :y1="smolensk1.y"
           :x2="orsha1.x"
@@ -285,6 +330,7 @@
           stroke-width="5"
         />
         <line
+          class="green"
           :x1="riga1.x"
           :y1="riga1.y"
           :x2="orsha1.x"
@@ -293,6 +339,7 @@
           stroke-width="5"
         />
         <path
+          class="green"
           :d="'M'+ rigaLeft1.x + ',' + rigaLeft1.y + ' ' + 'C' + (rigaLeft1.x - 5) + ',' + (rigaLeft1.y + 25) + ' ' 
                  + (riga1.x - 10) + ',' + (riga1.y + 30) + ' ' + riga1.x + ',' + riga1.y"
           stroke="limegreen"
@@ -538,6 +585,19 @@ export default {
 img {
   width: 100%;
   height: 100%;
+}
+
+.green-a:hover .green {
+  stroke-width: 9;
+}
+.red-a:hover .red {
+  stroke-width: 9;
+}
+.light-blue-a:hover .light-blue {
+  stroke-width: 9;
+}
+.violet-a:hover .violet {
+  stroke-width: 9;
 }
 
 .map-background {
