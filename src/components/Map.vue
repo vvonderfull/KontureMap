@@ -234,8 +234,7 @@
         />
         <path
           class="light-blue"
-          :d="'M'+ varna1.x + ',' + varna1.y + ' ' + 'C' + (varna1.x - 0) + ',' + (varna1.y - 30) + ' ' 
-                 + (kr_rog1.x - 110) + ',' + (kr_rog1.y - 80) + ' ' + kr_rog1.x + ',' + kr_rog1.y"
+          :d="'M'+ varna1.x + ',' + varna1.y + ' ' + 'C' + (varna1.x + 104) + ',' + (varna1.y - 239) + ' ' + (kr_rog1.x - -30) + ',' + (kr_rog1.y + 21) + ' ' + (kr_rog1.x - 2) + ',' + (kr_rog1.y - 6)"
           stroke="deepskyblue"
           fill="none"
           stroke-width="5"
